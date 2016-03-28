@@ -1,0 +1,20 @@
+;; Key binding
+(progn
+  (global-set-key [f1] 'set-mark-command)
+  (global-set-key [f5] 'copy-current-buffer-path)
+  (global-set-key [f6] 'copy-current-buffer-name)
+  (global-set-key [f7] 'generate-buffer)
+  ;; (global-set-key [f8] 'rotate-windows)
+  ;; (global-set-key [f9] 'rgrep)
+  (global-set-key [f10] 'delete-trailing-whitespace)
+  (global-set-key [f11] 'other-frame)
+  (global-set-key [f12] 'other-window)
+  (global-set-key (kbd "C-c g") 'comment-or-uncomment-region)
+  ;;(global-set-key (kbd "C-c j") 'ido-imenu)
+  (global-set-key (kbd "C-z") nil)
+  ;;(global-set-key [(control backspace)] 'hungry-delete-backward)
+  (if (eq system-type 'gnu/linux)
+    (global-set-key [(control h)] 'delete-backward-char))
+)
+
+(provide 'init-global-keys)
