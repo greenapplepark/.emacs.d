@@ -6,7 +6,6 @@
 
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
-;;(mapc 'load (directory-files "~/.emacs.d/config" t "\\.el$"))
 
 (require 'init-basic)
 (require 'init-compat)
@@ -27,7 +26,10 @@
 (require 'init-php)
 (require 'init-cpp)
 
+(require 'init-magit)
+(require 'init-projectile)
 (require 'init-complete)
 (require 'init-global-keys)
+
 
 (provide 'init)

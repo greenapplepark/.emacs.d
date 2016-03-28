@@ -4,7 +4,9 @@
 (if (>= emacs-major-version 24)
   (progn
     (require-package 'color-theme-modern)
+    (require-package 'alect-themes)
     (load-theme 'deep-blue t))
+    ;; (load-theme 'alect-light-alt t))
   (progn
     (require 'color-theme)
     (color-theme-initialize)
