@@ -22,7 +22,7 @@
 ;              )))
 
 (setq projectile-globally-ignored-files
-   (append projectile-globally-ignored-files '(
+    (append projectile-globally-ignored-files '(
         ".git"
         ".svn"
         ".hg"
