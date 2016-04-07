@@ -29,7 +29,7 @@
 (require 'init-auto-complete)
 (require 'init-magit)
 (require 'init-projectile)
-(require 'init-complete)
+;; (require 'init-complete)
 (require 'init-global-keys)
 
 

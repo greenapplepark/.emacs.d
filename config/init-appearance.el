@@ -1,16 +1,17 @@
 (require 'linum)
 (global-linum-mode)
 
-(if (>= emacs-major-version 24)
-  (progn
-    (require-package 'color-theme-modern)
-    (require-package 'alect-themes)
-    (load-theme 'deep-blue t))
+(when (display-graphic-p)
+  (if (>= emacs-major-version 24)
+      (progn
+	(require-package 'color-theme-modern)
+	(require-package 'alect-themes)
+	(load-theme 'deep-blue t))
     ;; (load-theme 'alect-light-alt t))
-  (progn
-    (require 'color-theme)
-    (color-theme-initialize)
-    (color-theme-billw)))
+    (progn
+      (require 'color-theme)
+      (color-theme-initialize)
+      (color-theme-billw))))
 
 ;; Disable tool-bar
 (tool-bar-mode 0)
@@ -18,8 +19,10 @@
 (scroll-bar-mode 0)
 
 ;; Transparent
-(set-frame-parameter (selected-frame) 'alpha '(85 50))
-(add-to-list 'default-frame-alist '(alpha 96 96))
+(when (display-graphic-p)
+  (progn
+    (set-frame-parameter (selected-frame) 'alpha '(85 50))
+    (add-to-list 'default-frame-alist '(alpha 96 96))))
 
 ;; Highlight current line.
 (global-hl-line-mode t)
@@ -59,6 +62,8 @@
            (lambda (c) (format "%04X" c))
            keke-color
            "")))))))
-(keke-color-theme-adjust-hl-mode-face)
+
+(when (display-graphic-p)
+  (keke-color-theme-adjust-hl-mode-face))
 
 (provide 'init-appearance)
