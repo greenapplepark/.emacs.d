@@ -25,15 +25,17 @@
     (add-to-list 'default-frame-alist '(alpha 96 96))))
 
 ;; Highlight current line.
-(global-hl-line-mode t)
-(or (facep 'keke-hl-line-face) (make-face 'keke-hl-line-face))
-(setq hl-line-face 'keke-hl-line-face)
-(face-spec-set 'keke-hl-line-face '((t (
-                                      :background "DodgerBlue3"
-                                                  ;;:bold
-                                                  ;;:weight nil
-                                                  :inverse-video nil
-                                                  ))))
+(when (display-graphic-p)
+  (progn
+    (global-hl-line-mode t)
+    (or (facep 'keke-hl-line-face) (make-face 'keke-hl-line-face))
+    (setq hl-line-face 'keke-hl-line-face)
+    (face-spec-set 'keke-hl-line-face '((t (
+					    :background "DodgerBlue3"
+							;;:bold
+							;;:weight nil
+							:inverse-video nil
+							))))))
 (defun keke-color-theme-adjust-hl-mode-face()
   "interactive"
   (let* ((color  (x-color-values (face-attribute 'default :background))))

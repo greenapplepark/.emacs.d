@@ -26,10 +26,10 @@
 (require 'init-php)
 (require 'init-cpp)
 
-(require 'init-auto-complete)
+;; (require 'init-auto-complete)
 (require 'init-magit)
 (require 'init-projectile)
-;; (require 'init-complete)
+(require 'init-complete)
 (require 'init-global-keys)
 
 
