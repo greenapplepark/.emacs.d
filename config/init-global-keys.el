@@ -14,7 +14,7 @@
   (global-set-key (kbd "C-z") nil)
   (global-set-key [(control backspace)] 'hungry-delete-backward)
   (if (eq system-type 'gnu/linux)
-    (global-set-key [(control h)] 'delete-backward-char))
+      (global-set-key [(control h)] 'delete-backward-char))
 )
 
 (provide 'init-global-keys)

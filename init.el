@@ -16,10 +16,10 @@
 (require 'init-appearance)
 (require 'init-fonts)
 (require 'init-sessions)
+(require 'init-smartparens)
 (require 'init-editing-utils)
 (require 'init-ido)
 (require 'init-ibuffer)
-(require 'init-paredit)
 
 
 ;; Language support

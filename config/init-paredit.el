@@ -1,5 +1,6 @@
 (require-package 'paredit)
 (autoload 'enable-paredit-mode "paredit")
+(paredit-mode 1)
 
 (defun maybe-map-paredit-newline ()
   (unless (or (memq major-mode '(inferior-emacs-lisp-mode cider-repl-mode))
@@ -8,14 +9,21 @@
 
 (add-hook 'paredit-mode-hook 'maybe-map-paredit-newline)
 
-(after-load 'paredit
-  (diminish 'paredit-mode " Par")
-  (dolist (binding (list (kbd "C-<left>") (kbd "C-<right>")
-                         (kbd "C-M-<left>") (kbd "C-M-<right>")))
-    (define-key paredit-mode-map binding nil))
+;; (after-load 'paredit
+;;   (diminish 'paredit-mode " Par")
+;;   (dolist (binding (list (kbd "C-<left>") (kbd "C-<right>")
+;;                          (kbd "C-M-<left>") (kbd "C-M-<right>") (kbd "M-DEL")))
+;;     (define-key paredit-mode-map binding nil))
 
-  ;; Allow my global binding of M-? to work when paredit is active
-  (define-key paredit-mode-map (kbd "M-?") nil))
+;;   ;; Allow my global binding of M-? to work when paredit is active
+;;   (define-key paredit-mode-map (kbd "M-?") nil))
+
+
+(diminish 'paredit-mode " Par")
+(dolist (binding (list (kbd "C-<left>") (kbd "C-<right>")
+		       (kbd "C-M-<left>") (kbd "C-M-<right>") (kbd "M-DEL")))
+  (define-key paredit-mode-map binding nil))
+
 
 
 ;; Compatibility with other modes

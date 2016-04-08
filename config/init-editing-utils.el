@@ -69,7 +69,6 @@ With argument, do this that many times."
 
 (global-set-key (read-kbd-macro "<M-DEL>") 'backward-delete-word)
 
-
 ;; New temp buffer
 (defun generate-buffer ()
   (interactive)
