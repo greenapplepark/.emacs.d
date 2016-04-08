@@ -12,7 +12,7 @@
   (global-set-key (kbd "C-c g") 'comment-or-uncomment-region)
   ;;(global-set-key (kbd "C-c j") 'ido-imenu)
   (global-set-key (kbd "C-z") nil)
-  ;;(global-set-key [(control backspace)] 'hungry-delete-backward)
+  (global-set-key [(control backspace)] 'hungry-delete-backward)
   (if (eq system-type 'gnu/linux)
     (global-set-key [(control h)] 'delete-backward-char))
 )

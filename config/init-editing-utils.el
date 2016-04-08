@@ -109,7 +109,6 @@ With argument, do this that many times."
 (define-key global-map (kbd "C-c k") 'ace-jump-mode)
 
 
-
 ;; Reload file
 (defun reload-file ()
   (interactive)
@@ -125,6 +124,7 @@ With argument, do this that many times."
 (global-set-key (kbd "C-/") 'undo)
 (global-set-key (kbd "C-.") 'redo)
 
+
 ;; For rgrep in windows
 (if (eq system-type 'windows-nt)
   (progn
@@ -135,5 +135,15 @@ With argument, do this that many times."
       "Use cygwin's /dev/null as the null-device."
       (let ((null-device "/dev/null")) ad-do-it))
     (ad-activate 'grep-compute-defaults)))
+
+
+;; Hungry delete
+(require 'hungry-delete)
+
+
+;; PopWin
+(require-package 'popwin)
+(require 'popwin)
+(popwin-mode 1)
 
 (provide 'init-editing-utils)

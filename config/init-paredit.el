@@ -8,30 +8,14 @@
 
 (add-hook 'paredit-mode-hook 'maybe-map-paredit-newline)
 
-; (defvar electrify-return-match
-;   "[\]}\)\"]"
-;   "If this regexp matches the text after the cursor, do an \"electric\"
-; return.")
+(after-load 'paredit
+  (diminish 'paredit-mode " Par")
+  (dolist (binding (list (kbd "C-<left>") (kbd "C-<right>")
+                         (kbd "C-M-<left>") (kbd "C-M-<right>")))
+    (define-key paredit-mode-map binding nil))
 
-; (defun electrify-return-if-match (arg)
-;   "If the text after the cursor matches `electrify-return-match' then
-; open and indent an empty line between the cursor and the text.  Move the
-; cursor to the new line."
-;   (interactive "P")
-;   (let ((case-fold-search nil))
-;     (if (looking-at electrify-return-match)
-;   (save-excursion (newline-and-indent)))
-;     (newline arg)
-;     (indent-according-to-mode)))
-
-; (after-load 'paredit
-;   (diminish 'paredit-mode " Par")
-;   (dolist (binding (list (kbd "C-<left>") (kbd "C-<right>")
-;                          (kbd "C-M-<left>") (kbd "C-M-<right>")))
-;     (define-key paredit-mode-map binding nil))
-
-;   ;; Allow my global binding of M-? to work when paredit is active
-;   (define-key paredit-mode-map (kbd "M-?") nil))
+  ;; Allow my global binding of M-? to work when paredit is active
+  (define-key paredit-mode-map (kbd "M-?") nil))
 
 
 ;; Compatibility with other modes

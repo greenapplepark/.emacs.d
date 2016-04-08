@@ -67,37 +67,12 @@ locate PACKAGE."
 (require-package 'cl-lib)
 (require 'cl-lib)
 
+(require-package 'diminish)
+
 ; (defvar keke-packages
-;   '(ace-jump-mode
-;     actionscript-mode
-;     browse-kill-ring
-;     helm
-;     highlight-symbol
-; 		;; hungry-delete
-;     lua-mode
+;   '(
 ;     popwin
-;     php-mode
-;     ;; redo+
-;     session
-;     smartparens
-;     yaml-mode)
 ;   "A list of packages to ensure are installed at launch.")
 
-; (require 'cl)
-; (defun keke-packages-installed-p ()
-;   (loop for p in keke-packages
-; 		do (if (not (package-installed-p p))
-; 			 (return nil))
-; 		finally (return t)))
-
-; (unless (keke-packages-installed-p)
-;   ;; check for new packages (package versions)
-;   (message "%s" "Emacs is now refreshing its package database...")
-;   (package-refresh-contents)
-;   (message "%s" " done.")
-;   ;; install the missing packages
-;   (dolist (p keke-packages)
-; 	(when (not (package-installed-p p))
-; 	  (package-install p))))
 
 (provide 'init-elpa)
