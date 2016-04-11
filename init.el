@@ -19,6 +19,7 @@
 (require 'init-smartparens)
 (require 'init-editing-utils)
 (require 'init-ido)
+(require 'init-swiper)
 (require 'init-ibuffer)
 
 

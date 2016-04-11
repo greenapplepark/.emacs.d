@@ -105,7 +105,11 @@ With argument, do this that many times."
 
 ;; Ace jump
 (require-package 'ace-jump-mode) 
-(define-key global-map (kbd "C-c k") 'ace-jump-mode)
+(define-key global-map (kbd "C-c j") 'ace-jump-mode)
+
+;; Avy mode
+;; (require-package 'avy)
+;; (global-set-key (kbd "C-c j") 'avy-goto-char)
 
 
 ;; Reload file
@@ -144,5 +148,16 @@ With argument, do this that many times."
 (require-package 'popwin)
 (require 'popwin)
 (popwin-mode 1)
+
+
+;; Do not show kill process question
+(setq kill-buffer-query-functions
+      (remove 'process-kill-buffer-query-function kill-buffer-query-functions))
+
+
+;; Expand region
+(require-package 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 
 (provide 'init-editing-utils)
