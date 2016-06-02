@@ -11,7 +11,7 @@
     (progn
       (require 'color-theme)
       (color-theme-initialize)
-      (color-theme-billw))))
+      (color-theme-deep-blue))))
 
 ;; Disable tool-bar
 (tool-bar-mode 0)

@@ -22,10 +22,13 @@
 (require 'init-swiper)
 (require 'init-ibuffer)
 
-
 ;; Language support
 (require 'init-php)
 (require 'init-cpp)
+(require 'init-sql)
+(require 'init-docker)
+
+;; (require 'init-org)
 
 (require 'init-auto-complete)
 (require 'init-magit)
