@@ -1,9 +1,5 @@
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
+; (package-initialize)
 
 (let ((minver "23.3"))
   (when (version<= emacs-version "23.1")
@@ -44,6 +40,5 @@
 (require 'init-projectile)
 (require 'init-complete)
 (require 'init-global-keys)
-
 
 (provide 'init)
