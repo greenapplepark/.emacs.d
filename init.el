@@ -30,6 +30,7 @@
 (require 'init-cpp)
 (require 'init-sql)
 (require 'init-docker)
+(require 'init-yaml)
 ; (require 'init-golang)
 (require 'init-protobuf)
 
