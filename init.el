@@ -1,12 +1,10 @@
-
-; (package-initialize)
-
 (let ((minver "23.3"))
   (when (version<= emacs-version "23.1")
     (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
 (when (version<= emacs-version "24")
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
 
@@ -30,16 +28,6 @@
 (require 'init-cpp)
 (require 'init-sql)
 (require 'init-docker)
-(require 'init-yaml)
-; (require 'init-golang)
-(require 'init-protobuf)
+(require 'init-golang)
 
 ;; (require 'init-org)
-
-(require 'init-auto-complete)
-(require 'init-magit)
-(require 'init-projectile)
-(require 'init-complete)
-(require 'init-global-keys)
-
-(provide 'init)

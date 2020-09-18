@@ -19,7 +19,7 @@
 ;;   '("elpa" . "http://tromey.com/elpa/"))
 ;; Add melpa to package list
 (add-to-list 'package-archives
-  '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+  '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 ;; Add popkit for China
 ;; (add-to-list 'package-archives
 ;;   '("popkit" . "http://elpa.popkit.org/packages/"))

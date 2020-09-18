@@ -163,7 +163,7 @@
   (keke-set-font keke-latin-size keke-chinese-size))
 
 ;; (keke-fontset-dejavu 14 13)
-(keke-fontset-consolas 13 12)
+;; (keke-fontset-consolas 13 12)
 ;; (keke-fontset-monaco 11 12)
 ;; (keke-fontset-courier 13 13)
 
